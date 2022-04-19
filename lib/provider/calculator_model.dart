@@ -1,0 +1,26 @@
+class Calculator {
+  final bool shouldAppend;
+  final String equation;
+  final String result;
+  String allText;
+
+  Calculator({
+    this.shouldAppend = true,
+    this.equation = '0',
+    this.result = '0',
+    this.allText = '0',
+  });
+
+  Calculator copy({
+    bool? shouldAppend,
+    String? equation,
+    String? result,
+    String? allText,
+  }) =>
+      Calculator(
+        shouldAppend: shouldAppend ?? this.shouldAppend,
+        equation: equation ?? this.equation,
+        result: result ?? this.result,
+        allText: allText ?? this.allText,
+      );
+}
